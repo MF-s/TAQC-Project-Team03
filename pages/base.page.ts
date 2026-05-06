@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 
+
 export class BasePage {
   protected page: Page;
 
@@ -7,7 +8,7 @@ export class BasePage {
     this.page = page;
   }
 
-  async open(path: string = '') {
+  async open(path: string = '/') { 
     await this.page.goto(path);
   }
 

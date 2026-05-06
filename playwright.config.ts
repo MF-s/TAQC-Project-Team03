@@ -1,5 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
+import dotenv from 'dotenv';
 import { env } from './utils/env';
+
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 export default defineConfig({
   testDir: './tests',
@@ -15,9 +19,9 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    baseURL: env.BASE_URL,
-    headless: env.HEADLESS,
-    trace: 'on-first-retry',
+    baseURL: process.env.BASE_URL,
+    headless: process.env.HEADLESS === 'true',
+    trace: 'on', 
   },
 
   timeout: env.TIMEOUT,
