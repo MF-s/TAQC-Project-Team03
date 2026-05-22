@@ -16,7 +16,7 @@ export default defineConfig({
 
   use: {
     baseURL: env.BASE_URL,
-    headless: env.HEADLESS,
+    headless: process.env.CI ? true : env.HEADLESS,
     trace: 'on-first-retry',
   },
 
