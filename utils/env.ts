@@ -7,4 +7,6 @@ export const env = {
   HEADLESS: process.env.HEADLESS === 'true',
   RETRIES: Number(process.env.RETRIES) || 0,
   TIMEOUT: Number(process.env.TIMEOUT) || 30000,
+  USER_EMAIL: process.env.USER_EMAIL || '',
+  USER_PASSWORD: process.env.USER_PASSWORD || '',
 };
