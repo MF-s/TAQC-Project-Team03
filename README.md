@@ -33,6 +33,12 @@ npx playwright install --with-deps
 
 ---
 
+## 4. create .env use for it .env.example
+
+for BASE_URL use https://www.greencity.cx.ua
+
+for USER_EMAIL & USER_PASSWORD use yours email and password
+
 # 🏗️ Architecture & Git Workflow
 
 To prevent merge conflicts and keep the repository clean:
