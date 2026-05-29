@@ -1,5 +1,5 @@
 import { Locator, Page } from '@playwright/test';
-
+import * as allure from 'allure-js-commons';
 import { BasePage } from './base.page';
 
 export class NewsPage extends BasePage {
@@ -7,20 +7,18 @@ export class NewsPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-
-    this.createNewsButton = page.locator(
-      'span',
-      {
-        hasText: 'Create news',
-      },
-    );
+    this.createNewsButton = page.locator('span', { hasText: 'Create news' });
   }
 
   async open(): Promise<void> {
-    await super.open('/news');
+    await allure.step('Open the GreenCity News page', async () => {
+      await super.open('/news');
+    });
   }
 
   async clickCreateNews(): Promise<void> {
-    await this.createNewsButton.click();
+    await allure.step('Click the "Create news" button', async () => {
+      await this.createNewsButton.click();
+    });
   }
 }

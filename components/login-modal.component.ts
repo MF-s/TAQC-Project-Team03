@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import * as allure from 'allure-js-commons';
 import { BaseComponent } from './base.component';
 
 export class LoginModalComponent extends BaseComponent {
@@ -7,12 +8,11 @@ export class LoginModalComponent extends BaseComponent {
   }
 
   async login(email: string, password: string): Promise<void> {
-    await this.root.waitFor({ state: 'visible' });
-
-    await this.root.locator('input[formcontrolname="email"]').fill(email);
-
-    await this.root.locator('input[formcontrolname="password"]').fill(password);
-
-    await this.root.locator('button[type="submit"]').click();
+    await allure.step(`Log in to the system as user: ${email}`, async () => {
+      await this.root.waitFor({ state: 'visible' });
+      await this.root.locator('input[formcontrolname="email"]').fill(email);
+      await this.root.locator('input[formcontrolname="password"]').fill(password);
+      await this.root.locator('button[type="submit"]').click();
+    });
   }
 }

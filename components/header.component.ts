@@ -1,4 +1,5 @@
 import { Locator, Page } from '@playwright/test';
+import * as allure from 'allure-js-commons';
 import { BaseComponent } from './base.component';
 
 export class HeaderComponent extends BaseComponent {
@@ -7,15 +8,13 @@ export class HeaderComponent extends BaseComponent {
 
   constructor(page: Page) {
     super(page, page.locator('app-header'));
-
-    this.signInButton = this.page.getByRole('link', {
-  name: /sign in|увійти/i,
-});
-
+    this.signInButton = this.page.getByRole('link', { name: /sign in|увійти/i });
     this.profileButton = this.root.locator('a.url-name[href*="profile"]');
   }
 
   async clickSignIn(): Promise<void> {
-    await this.signInButton.click();
+    await allure.step('Click "Sign In" in the site header', async () => {
+      await this.signInButton.click();
+    });
   }
 }

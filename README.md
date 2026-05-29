@@ -1,140 +1,189 @@
-# 🎭 Playwright Test Framework (TypeScript)
+# GreenCity Eco-News Automation Project (Playwright + TypeScript)
 
-## 📌 Project Description
+Welcome to our automation repository!  
+This project uses **Playwright** with the **Page Object Model (POM)** pattern and **TypeScript** to automate E2E tests for the GreenCity platform.
 
-This project is a basic test automation framework built with **Playwright** and **TypeScript**.
-
-The goal of this project is to provide a clean and scalable foundation for automated UI testing using modern approaches such as:
-
-* Page Object Model (POM)
-* Component-based architecture
-* Environment-based configuration
-
-⚠️ At this stage, no actual tests or page objects are implemented. This is only the initial setup.
+As a team, we are working on automating **TC1 through TC10**.  
+The foundational architecture, core configuration, CI/CD pipeline, and the first two test cases (**TC1 & TC2**) are already fully implemented and ready.
 
 ---
 
-## ⚙️ Tech Stack
+# 🚀 Getting Started (How to Pull & Setup)
 
-* Node.js
-* Playwright
-* TypeScript
-* dotenv
+Before you start picking up tasks, make sure you have the latest codebase and all dependencies installed.
 
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
+## 1. Fetch the latest updates from `main`
 
 ```bash
-git clone https://github.com/MF-s/TAQC-Project-Team03.git
-cd YOUR_REPO
+git checkout main
+git pull origin main
 ```
 
-### 2. Install dependencies
+## 2. Install project dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
-### 3. Setup environment variables
-
-Create a `.env` file based on `.env.example`:
+## 3. Install Playwright browsers
 
 ```bash
-cp .env.example .env
-```
-
-Then update values if needed:
-
-```
-BASE_URL=https://www.greencity.cx.ua/#/greenCity
-HEADLESS=true
-RETRIES=0
-TIMEOUT=30000
+npx playwright install --with-deps
 ```
 
 ---
 
-## ▶️ Running Tests
+# 🏗️ Architecture & Git Workflow
 
-Run all tests:
+To prevent merge conflicts and keep the repository clean:
 
-```bash
-npx playwright test
+- ❌ Do **not** write raw locators directly inside test files
+- ✅ All locators and reusable actions must be placed inside:
+  - `components/`
+  - `pages/`
+
+---
+
+# 🧩 Working with `CreateNewsFormComponent`
+
+For **TC3, TC4, TC5, and TC6**, you will be validating:
+
+- Input fields
+- Counters
+- Tags
+- Validation messages
+
+All required locators are already declared inside:
+
+```txt
+src/components/create-news-form.component.ts
 ```
 
-Run in headed mode:
+Examples:
 
-```bash
-npm run test:headed
-```
+- `titleInput`
+- `contentEditor`
+- `sourceInput`
+- `tagsSection`
 
-Run with UI:
+## Important
 
-```bash
-npm run test:ui
+If you need additional validations or helper methods:
+
+✅ Add them inside the existing component class  
+❌ Do NOT create duplicate components for the same form
+
+---
+
+# 📂 Placeholders for TC7 – TC10
+
+The placeholder files for upcoming test cases are already prepared.
+
+| Test Case | Target File | Purpose |
+|---|---|---|
+| TC7 | `src/components/confirmation-modal.component.ts` | Cancel modal locators and actions |
+| TC8 | `src/components/news-preview.component.ts` | Preview page validations |
+| TC9 & TC10 | `src/pages/news-details.page.ts` | Single news page & Edit functionality |
+
+---
+
+## 🔁 Note for TC10 (Editing)
+
+The **Edit News** form is identical to the **Create News** form.
+
+You do **not** need to create a separate component/page for editing.
+
+Instead:
+
+1. Navigate using `NewsDetailsPage`
+2. Click the **Edit** button
+3. Re-use existing methods from:
+
+```txt
+CreateNewsFormComponent
 ```
 
 ---
 
-## 📁 Project Structure
+# 📊 Test Execution & Allure Reports
 
+The project already includes:
+
+- ✅ Allure Reports
+- ✅ `allure.step()` logging
+- ✅ Automatic screenshots on failure
+
+---
+
+## ▶️ Run All Tests
+
+### Run all tests in headless mode
+
+```bash
+npm run test
 ```
-.
-├── tests/        # Test files
-├── pages/        # Page Objects (future implementation)
-├── components/   # Reusable UI components
-├── fixtures/     # Custom test fixtures
-├── utils/        # Helper functions (e.g., env config)
-├── playwright.config.ts
-├── .env.example
-└── README.md
+
+### Run a specific test file in headed mode
+
+```bash
+npx playwright test tests/create-news-validation.spec.ts --headed
 ```
 
 ---
 
-## 🔧 Configuration
+# 📈 Generate Allure Report
 
-The project uses environment variables via `.env`:
+After test execution finishes, generate and open the report:
 
-| Variable | Description                  | Default |
-| -------- | ---------------------------- | ------- |
-| BASE_URL | Base application URL         | —       |
-| HEADLESS | Run browser in headless mode | true    |
-| RETRIES  | Number of retries            | 0       |
-| TIMEOUT  | Test timeout (ms)            | 30000   |
+```bash
+npm run allure:report
+```
+
+This command will:
+
+- Compile Allure results
+- Attach screenshots from failed tests
+- Launch a local report server in your browser
+
+## Stop the local Allure server
+
+Press:
+
+```bash
+Ctrl + C
+```
+
+inside the terminal.
 
 ---
 
-## 📌 Notes
+# 🛠️ Branching Policy Reminder
 
-* `.env` file is ignored by Git (not committed)
-* Use `.env.example` as a template
-* Versions of dependencies are fixed for consistency across the team
+## ❌ Never push directly to `main`
+
+Create a separate feature branch for your work:
+
+```bash
+git checkout -b feature/tc3-tc4-validation
+```
+
+Once your task is complete:
+
+1. Push your branch
+2. Open a Pull Request against `main`
 
 ---
 
-## 👥 Team Workflow (Basic)
+# ✅ Team Guidelines
 
-1. Create a new branch:
+- Keep tests independent
+- Re-use existing components/pages
+- Avoid duplicated locators
+- Keep assertions readable
+- Prefer reusable helper methods over repeated code
 
-```bash
-git checkout -b feature/your-task
-```
+---
 
-2. Commit changes:
+# 🚀 Good luck team!
 
-```bash
-git add .
-git commit -m "your message"
-```
-
-3. Push branch:
-
-```bash
-git push origin feature/your-task
-```
-
-4. Create a Pull Request on GitHub
+Let’s write some clean and stable automation code 💚

@@ -14,12 +14,16 @@ export default defineConfig({
 
   workers: process.env.CI ? 1 : undefined,
 
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['allure-playwright', { outputFolder: 'allure-results' }]
+  ],
 
   use: {
     baseURL: env.BASE_URL,
     headless: process.env.CI ? true : env.HEADLESS,
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
 
     viewport: { width: 1920, height: 1080 },
   },
