@@ -8,20 +8,41 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    
+    # СЕКРЕТНИЙ ІНГРЕДІЄНТ: Запуск у готовому оточенні від розробників Playwright
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble # Контейнер із вшитими браузерами
+
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        
     - name: Install dependencies
       run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+
+    # КРОК ЗІ ВСТАНОВЛЕННЯМ БРАУЗЕРІВ БІЛЬШЕ НЕ ПОТРІБЕН — ВОНИ ВЖЕ Є В КОНТЕЙНЕРІ!
+
+    # Додаємо префікс CI=true, щоб Playwright знав, що він у хмарі
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        CI: true
+        BASE_URL: ${{ secrets.BASE_URL }}
+        USER_EMAIL: ${{ secrets.USER_EMAIL }}
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+      
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
         path: playwright-report/
+        retention-days: 30
+
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: allure-results
+        path: allure-results/
         retention-days: 30

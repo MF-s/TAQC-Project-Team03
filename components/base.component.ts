@@ -1,3 +1,8 @@
+import { Locator, Page } from '@playwright/test';
+
 export class BaseComponent {
-  constructor(protected page) {}
+  constructor(
+    protected page: Page,
+    protected root: Locator,
+  ) {}
 }
