@@ -11,7 +11,7 @@ jobs:
     
     # СЕКРЕТНИЙ ІНГРЕДІЄНТ: Запуск у готовому оточенні від розробників Playwright
     container:
-      image: mcr.microsoft.com/playwright:v1.49.0-noble # Контейнер із вшитими браузерами
+      image: mcr.microsoft.com/playwright:v1.59.1-noble # Контейнер із вшитими браузерами
 
     steps:
     - uses: actions/checkout@v4
