@@ -1,9 +1,10 @@
-import { test,expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import * as allure from 'allure-js-commons';
 import { NewsPage } from '../pages/news.page';
 import { CreateNewsFormComponent } from '../components/create-news-form.component';
 
 test.describe('News Creation — Field Validation and Button States', () => {
+  
   test.skip('TC2 - should validate Title field limits and Publish button states', async ({ page }) => {
     await allure.epic('GreenCity Web Application');
     await allure.feature('Eco-News Creation');
@@ -35,14 +36,13 @@ test.describe('News Creation — Field Validation and Button States', () => {
     await createNewsForm.expectTitleBorderNotToBeRed();
     await createNewsForm.expectPublishButtonToBeDisabled();
 
-    // Заповнення решти обов'язкових полів для активації кнопки
+    // Заповнення решта обов'язкових полів для активації кнопки
     await createNewsForm.selectNewsTag();
     await createNewsForm.fillContent('This is a valid test content with 25 chars');
     await createNewsForm.expectPublishButtonToBeEnabled();
   });
-});
 
-// ТС-3
+  // ТС-3
   test('TC3 - Verify that the user can select between 1 and 3 tags from the predefined list', async ({ page }) => {
     await allure.epic('GreenCity Web Application');
     await allure.feature('Eco-News Creation');
@@ -65,7 +65,7 @@ test.describe('News Creation — Field Validation and Button States', () => {
       await createNewsForm.clickPublish();
     });
 
-    //Три теги
+    // Три теги
     await test.step('Step 6-9: Open form again and select three tags', async () => {
       await newsPage.open();
       await newsPage.clickCreateNews();
@@ -82,9 +82,9 @@ test.describe('News Creation — Field Validation and Button States', () => {
       await newsPage.clickCreateNews();
       await createNewsForm.expectOnlyThreeTagsCanBeSelected();
     });
+  });
 
-
-//ТС-4 
+  // ТС-4 
   test('TC4 - Verify the validation of the "Upload Image" field', async ({ page }) => {
     await allure.epic('GreenCity Web Application');
     await allure.feature('Eco-News Creation');
@@ -94,12 +94,10 @@ test.describe('News Creation — Field Validation and Button States', () => {
     const fs = require('fs');
     const path = require('path');
 
-    // Шляхи до тимчасових файлів
     const validPngPath = path.join(__dirname, 'valid_image.png');
     const invalidGifPath = path.join(__dirname, 'invalid_format.gif');
     const hugeJpgPath = path.join(__dirname, 'huge_image.jpg');
 
-    // Генерація файлів
     fs.writeFileSync(validPngPath, Buffer.alloc(5 * 1024 * 1024));
     fs.writeFileSync(invalidGifPath, Buffer.alloc(1 * 1024 * 1024));
     fs.writeFileSync(hugeJpgPath, Buffer.alloc(15 * 1024 * 1024));
@@ -111,23 +109,29 @@ test.describe('News Creation — Field Validation and Button States', () => {
     await newsPage.clickCreateNews();
     await createNewsForm.expectFormOpened();
 
-    try {
+try {
       //1 Валідний PNG (5MB) 
       await test.step('Step 2-3: Upload a valid PNG file (5MB) and verify success', async () => {
         await createNewsForm.uploadImage(validPngPath);
-        await expect(page.getByText('Завантажуйте лише PNG або JPEG')).not.toHaveCSS('color', 'rgb(255, 0, 0)');
+        await expect(page.getByText('Завантажуйте лише PNG або JPEG')).toBeHidden();
       });
 
-      //2 Невалідний формат GIF (1MB)
+      // 2 Невалідний формат GIF (1MB) 
       await test.step('Step 4-5: Upload a GIF file (1MB) and verify error message', async () => {
+        await page.reload();
+        await createNewsForm.expectFormOpened();
+
         await createNewsForm.uploadImage(invalidGifPath);
-        await expect(page.locator('form')).toContainText(/only PNG or JPEG|не повинен перевищувати/i);
+        await expect(page.locator('form')).toContainText('Upload only PNG or JPG');
       });
 
-      //3 Завеликий JPEG (15MB) 
+      //3 Завеликий JPEG (15MB)
       await test.step('Step 6-7: Upload a JPEG file (15MB) and verify error message', async () => {
+        await page.reload();
+        await createNewsForm.expectFormOpened();
+
         await createNewsForm.uploadImage(hugeJpgPath);
-        await expect(page.locator('form')).toContainText(/only PNG or JPEG|не повинен перевищувати/i);
+        await expect(page.locator('form')).toContainText('Upload only PNG or JPG');
       });
 
     } finally {
@@ -135,5 +139,6 @@ test.describe('News Creation — Field Validation and Button States', () => {
       if (fs.existsSync(invalidGifPath)) fs.unlinkSync(invalidGifPath);
       if (fs.existsSync(hugeJpgPath)) fs.unlinkSync(hugeJpgPath);
     }
-    });
-}); 
+  });
+
+});
