@@ -19,7 +19,7 @@ test.describe('News Creation — Preview Mode Verification', () => {
     // Дані для тесту
     const testTitle = 'Autotest Preview ' + Math.floor(Math.random() * 1000);
     const testContent = 'This is a valid test preview content with more than twenty characters.';
-    const expectedAuthor = 'Святослав';
+    const expectedAuthor = 'Max';
 
     // Динамічно отримуємо сьогоднішню дату
     const currentDate = new Date().toLocaleDateString('en-US', {
