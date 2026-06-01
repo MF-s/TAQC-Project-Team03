@@ -5,7 +5,7 @@ import { CreateNewsFormComponent } from '../components/create-news-form.componen
 
 test.describe('News Creation — Field Validation and Button States', () => {
   
-  test.skip('TC2 - should validate Title field limits and Publish button states', async ({ page }) => {
+  test('TC2 - should validate Title field limits and Publish button states', async ({ page }) => {
     await allure.epic('GreenCity Web Application');
     await allure.feature('Eco-News Creation');
     await allure.story('Validation of Title field limits and Publish button states');
