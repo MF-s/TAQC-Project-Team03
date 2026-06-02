@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import * as allure from 'allure-js-commons';
 import { NewsPage } from '../pages/news.page';
 import { CreateNewsFormComponent } from '../components/create-news-form.component';
+import { ConfirmationModalComponent } from '../components/confirmation-modal.component';
 
 test.describe('News Creation — Field Validation and Button States', () => {
 
@@ -55,7 +56,7 @@ test.describe('News Creation — Field Validation and Button States', () => {
 
     const newsPage = new NewsPage(page);
     const createNewsForm = new CreateNewsFormComponent(page);
-    
+    const confirmationModal = new ConfirmationModalComponent(page);
 
     await newsPage.open();
     await newsPage.clickCreateNews();
@@ -74,6 +75,10 @@ test.describe('News Creation — Field Validation and Button States', () => {
     await test.step('Step 6-9: Open form again and select three tags', async () => {
       await newsPage.open();
       await newsPage.clickCreateNews();
+      const yesButton = page.locator('button:has-text("Yes, cancel")');
+    if (await yesButton.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await yesButton.click();
+    }
       await createNewsForm.selectTags(['News', 'Events', 'Education']);
       await createNewsForm.fillTitle('Autotest Title 3 Tags');
       await createNewsForm.fillContent('This text contains more than twenty characters.');
