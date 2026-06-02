@@ -124,7 +124,7 @@ Call log:
                     - generic [ref=e82]: Ads
               - separator [ref=e83]
             - generic [ref=e84]:
-              - heading [level=2] [ref=e87]: 4194 items found
+              - heading [level=2] [ref=e87]: 4212 items found
               - generic [ref=e89]:
                 - button [pressed] [ref=e90]:
                   - emphasis [ref=e91]: 
@@ -133,7 +133,7 @@ Call log:
             - list [ref=e95]:
               - listitem [ref=e96]:
                 - link [ref=e97] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12703"
+                  - /url: "#/greenCity/news/12721"
                   - generic [ref=e99]:
                     - img [ref=e100]
                     - generic [ref=e101]:
@@ -158,7 +158,7 @@ Call log:
                             - generic [ref=e123]: "0"
               - listitem [ref=e126]:
                 - link [ref=e127] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12702"
+                  - /url: "#/greenCity/news/12720"
                   - generic [ref=e129]:
                     - img [ref=e130]
                     - generic [ref=e131]:
@@ -183,7 +183,7 @@ Call log:
                             - generic [ref=e153]: "0"
               - listitem [ref=e156]:
                 - link [ref=e157] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12701"
+                  - /url: "#/greenCity/news/12719"
                   - generic [ref=e159]:
                     - img [ref=e160]
                     - generic [ref=e161]:
@@ -208,22 +208,22 @@ Call log:
                             - generic [ref=e183]: "0"
               - listitem [ref=e186]:
                 - link [ref=e187] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12700"
+                  - /url: "#/greenCity/news/12718"
                   - generic [ref=e189]:
                     - img [ref=e190]
                     - generic [ref=e191]:
                       - list [ref=e192]:
                         - generic [ref=e193]: News
                       - generic [ref=e194]:
-                        - heading [level=3] [ref=e196]: TC-09 Edit Button Test 1780410777135
-                        - paragraph [ref=e199]: Automated test content for TC-09 verifying edit button visibility to the author.
+                        - heading [level=3] [ref=e196]: Autotest Title 1 Tag
+                        - paragraph [ref=e199]: This text contains more than twenty characters.
                       - generic [ref=e200]:
                         - paragraph [ref=e201]:
                           - img [ref=e202]
                           - generic [ref=e203]: Jun 2, 2026
                         - paragraph [ref=e204]:
                           - img [ref=e205]
-                          - generic [ref=e206]: Viacheslav
+                          - generic [ref=e206]: Max
                         - generic [ref=e207]:
                           - paragraph [ref=e208]:
                             - img [ref=e209]
@@ -233,282 +233,274 @@ Call log:
                             - generic [ref=e213]: "0"
               - listitem [ref=e216]:
                 - link [ref=e217] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12699"
+                  - /url: "#/greenCity/news/12717"
                   - generic [ref=e219]:
                     - img [ref=e220]
                     - generic [ref=e221]:
                       - list [ref=e222]:
-                        - generic [ref=e223]: News|
-                        - generic [ref=e224]: Events
-                      - generic [ref=e225]:
-                        - heading [level=3] [ref=e227]: lyzhany
-                        - paragraph [ref=e230]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e231]:
-                        - paragraph [ref=e232]:
-                          - img [ref=e233]
-                          - generic [ref=e234]: Jun 2, 2026
-                        - paragraph [ref=e235]:
-                          - img [ref=e236]
-                          - generic [ref=e237]: asdasd131
-                        - generic [ref=e238]:
-                          - paragraph [ref=e239]:
-                            - img [ref=e240]
-                            - generic [ref=e241]: "0"
-                          - paragraph [ref=e242]:
-                            - img [ref=e243]
-                            - generic [ref=e244]: "0"
-              - listitem [ref=e247]:
-                - link [ref=e248] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12698"
-                  - generic [ref=e250]:
-                    - img [ref=e251]
-                    - generic [ref=e252]:
-                      - list [ref=e253]:
-                        - generic [ref=e254]: News|
-                        - generic [ref=e255]: Events|
-                        - generic [ref=e256]: Education
-                      - generic [ref=e257]:
-                        - heading [level=3] [ref=e259]: Test
-                        - paragraph [ref=e262]: Test content with 20 chars
-                      - generic [ref=e263]:
+                        - generic [ref=e223]: News
+                      - generic [ref=e224]:
+                        - heading [level=3] [ref=e226]: TC-10 Initial title
+                        - paragraph [ref=e229]: TC-10 Initial content
+                      - generic [ref=e230]:
+                        - paragraph [ref=e231]:
+                          - img [ref=e232]
+                          - generic [ref=e233]: Jun 2, 2026
+                        - paragraph [ref=e234]:
+                          - img [ref=e235]
+                          - generic [ref=e236]: Yura
+                        - generic [ref=e237]:
+                          - paragraph [ref=e238]:
+                            - img [ref=e239]
+                            - generic [ref=e240]: "0"
+                          - paragraph [ref=e241]:
+                            - img [ref=e242]
+                            - generic [ref=e243]: "0"
+              - listitem [ref=e246]:
+                - link [ref=e247] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12716"
+                  - generic [ref=e249]:
+                    - img [ref=e250]
+                    - generic [ref=e251]:
+                      - list [ref=e252]:
+                        - generic [ref=e253]: News
+                      - generic [ref=e254]:
+                        - heading [level=3] [ref=e256]: TC-10 Initial title
+                        - paragraph [ref=e259]: TC-10 Initial content
+                      - generic [ref=e260]:
+                        - paragraph [ref=e261]:
+                          - img [ref=e262]
+                          - generic [ref=e263]: Jun 2, 2026
                         - paragraph [ref=e264]:
                           - img [ref=e265]
-                          - generic [ref=e266]: Jun 2, 2026
-                        - paragraph [ref=e267]:
-                          - img [ref=e268]
-                          - generic [ref=e269]: Viacheslav
-                        - generic [ref=e270]:
+                          - generic [ref=e266]: Yura
+                        - generic [ref=e267]:
+                          - paragraph [ref=e268]:
+                            - img [ref=e269]
+                            - generic [ref=e270]: "0"
                           - paragraph [ref=e271]:
                             - img [ref=e272]
                             - generic [ref=e273]: "0"
-                          - paragraph [ref=e274]:
-                            - img [ref=e275]
-                            - generic [ref=e276]: "0"
-              - listitem [ref=e279]:
-                - link [ref=e280] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12697"
-                  - generic [ref=e282]:
-                    - img [ref=e283]
-                    - generic [ref=e284]:
-                      - list [ref=e285]:
-                        - generic [ref=e286]: News
-                      - generic [ref=e287]:
-                        - heading [level=3] [ref=e289]: Test
-                        - paragraph [ref=e292]: Test content with 20 chars
-                      - generic [ref=e293]:
+              - listitem [ref=e276]:
+                - link [ref=e277] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12715"
+                  - generic [ref=e279]:
+                    - img [ref=e280]
+                    - generic [ref=e281]:
+                      - list [ref=e282]:
+                        - generic [ref=e283]: News
+                      - generic [ref=e284]:
+                        - heading [level=3] [ref=e286]: TC-10 Initial title
+                        - paragraph [ref=e289]: TC-10 Initial content
+                      - generic [ref=e290]:
+                        - paragraph [ref=e291]:
+                          - img [ref=e292]
+                          - generic [ref=e293]: Jun 2, 2026
                         - paragraph [ref=e294]:
                           - img [ref=e295]
-                          - generic [ref=e296]: Jun 2, 2026
-                        - paragraph [ref=e297]:
-                          - img [ref=e298]
-                          - generic [ref=e299]: Viacheslav
-                        - generic [ref=e300]:
+                          - generic [ref=e296]: Yura
+                        - generic [ref=e297]:
+                          - paragraph [ref=e298]:
+                            - img [ref=e299]
+                            - generic [ref=e300]: "0"
                           - paragraph [ref=e301]:
                             - img [ref=e302]
                             - generic [ref=e303]: "0"
-                          - paragraph [ref=e304]:
-                            - img [ref=e305]
-                            - generic [ref=e306]: "0"
-              - listitem [ref=e309]:
-                - link [ref=e310] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12696"
-                  - generic [ref=e312]:
-                    - img [ref=e313]
-                    - generic [ref=e314]:
-                      - list [ref=e315]:
-                        - generic [ref=e316]: News|
-                        - generic [ref=e317]: Events
-                      - generic [ref=e318]:
-                        - heading [level=3] [ref=e320]: lyzhany
-                        - paragraph [ref=e323]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e324]:
-                        - paragraph [ref=e325]:
-                          - img [ref=e326]
-                          - generic [ref=e327]: Jun 2, 2026
-                        - paragraph [ref=e328]:
-                          - img [ref=e329]
-                          - generic [ref=e330]: asdasd131
-                        - generic [ref=e331]:
-                          - paragraph [ref=e332]:
-                            - img [ref=e333]
-                            - generic [ref=e334]: "0"
-                          - paragraph [ref=e335]:
-                            - img [ref=e336]
-                            - generic [ref=e337]: "0"
-              - listitem [ref=e340]:
-                - link [ref=e341] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12695"
-                  - generic [ref=e343]:
-                    - img [ref=e344]
-                    - generic [ref=e345]:
-                      - list [ref=e346]:
-                        - generic [ref=e347]: News|
-                        - generic [ref=e348]: Events
-                      - generic [ref=e349]:
-                        - heading [level=3] [ref=e351]: lyzhany
-                        - paragraph [ref=e354]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e355]:
-                        - paragraph [ref=e356]:
-                          - img [ref=e357]
-                          - generic [ref=e358]: Jun 2, 2026
-                        - paragraph [ref=e359]:
-                          - img [ref=e360]
-                          - generic [ref=e361]: asdasd131
-                        - generic [ref=e362]:
-                          - paragraph [ref=e363]:
-                            - img [ref=e364]
-                            - generic [ref=e365]: "0"
-                          - paragraph [ref=e366]:
-                            - img [ref=e367]
-                            - generic [ref=e368]: "0"
-              - listitem [ref=e371]:
-                - link [ref=e372] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12694"
-                  - generic [ref=e374]:
-                    - img [ref=e375]
-                    - generic [ref=e376]:
-                      - list [ref=e377]:
-                        - generic [ref=e378]: News|
-                        - generic [ref=e379]: Events
+              - listitem [ref=e306]:
+                - link [ref=e307] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12714"
+                  - generic [ref=e309]:
+                    - img [ref=e310]
+                    - generic [ref=e311]:
+                      - list [ref=e312]:
+                        - generic [ref=e313]: News
+                      - generic [ref=e314]:
+                        - heading [level=3] [ref=e316]: TC-10 Initial title
+                        - paragraph [ref=e319]: TC-10 Initial content
+                      - generic [ref=e320]:
+                        - paragraph [ref=e321]:
+                          - img [ref=e322]
+                          - generic [ref=e323]: Jun 2, 2026
+                        - paragraph [ref=e324]:
+                          - img [ref=e325]
+                          - generic [ref=e326]: Yura
+                        - generic [ref=e327]:
+                          - paragraph [ref=e328]:
+                            - img [ref=e329]
+                            - generic [ref=e330]: "0"
+                          - paragraph [ref=e331]:
+                            - img [ref=e332]
+                            - generic [ref=e333]: "0"
+              - listitem [ref=e336]:
+                - link [ref=e337] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12713"
+                  - generic [ref=e339]:
+                    - img [ref=e340]
+                    - generic [ref=e341]:
+                      - list [ref=e342]:
+                        - generic [ref=e343]: News
+                      - generic [ref=e344]:
+                        - heading [level=3] [ref=e346]: TC-10 Initial title
+                        - paragraph [ref=e349]: TC-10 Initial content
+                      - generic [ref=e350]:
+                        - paragraph [ref=e351]:
+                          - img [ref=e352]
+                          - generic [ref=e353]: Jun 2, 2026
+                        - paragraph [ref=e354]:
+                          - img [ref=e355]
+                          - generic [ref=e356]: Yura
+                        - generic [ref=e357]:
+                          - paragraph [ref=e358]:
+                            - img [ref=e359]
+                            - generic [ref=e360]: "0"
+                          - paragraph [ref=e361]:
+                            - img [ref=e362]
+                            - generic [ref=e363]: "0"
+              - listitem [ref=e366]:
+                - link [ref=e367] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12712"
+                  - generic [ref=e369]:
+                    - img [ref=e370]
+                    - generic [ref=e371]:
+                      - list [ref=e372]:
+                        - generic [ref=e373]: News
+                      - generic [ref=e374]:
+                        - heading [level=3] [ref=e376]: TC-10 Initial title
+                        - paragraph [ref=e379]: TC-10 Initial content
                       - generic [ref=e380]:
-                        - heading [level=3] [ref=e382]: lyzhany
-                        - paragraph [ref=e385]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e386]:
-                        - paragraph [ref=e387]:
-                          - img [ref=e388]
-                          - generic [ref=e389]: Jun 2, 2026
-                        - paragraph [ref=e390]:
-                          - img [ref=e391]
-                          - generic [ref=e392]: asdasd131
-                        - generic [ref=e393]:
-                          - paragraph [ref=e394]:
-                            - img [ref=e395]
-                            - generic [ref=e396]: "0"
-                          - paragraph [ref=e397]:
-                            - img [ref=e398]
-                            - generic [ref=e399]: "0"
-              - listitem [ref=e402]:
-                - link [ref=e403] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12693"
-                  - generic [ref=e405]:
-                    - img [ref=e406]
-                    - generic [ref=e407]:
-                      - list [ref=e408]:
-                        - generic [ref=e409]: News|
-                        - generic [ref=e410]: Events
-                      - generic [ref=e411]:
-                        - heading [level=3] [ref=e413]: lyzhany
-                        - paragraph [ref=e416]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e417]:
-                        - paragraph [ref=e418]:
-                          - img [ref=e419]
-                          - generic [ref=e420]: Jun 2, 2026
-                        - paragraph [ref=e421]:
-                          - img [ref=e422]
-                          - generic [ref=e423]: asdasd131
-                        - generic [ref=e424]:
-                          - paragraph [ref=e425]:
-                            - img [ref=e426]
-                            - generic [ref=e427]: "0"
-                          - paragraph [ref=e428]:
-                            - img [ref=e429]
-                            - generic [ref=e430]: "0"
-              - listitem [ref=e433]:
-                - link [ref=e434] [cursor=pointer]:
-                  - /url: "#/greenCity/news/12692"
-                  - generic [ref=e436]:
-                    - img [ref=e437]
-                    - generic [ref=e438]:
-                      - list [ref=e439]:
-                        - generic [ref=e440]: News|
-                        - generic [ref=e441]: Events
-                      - generic [ref=e442]:
-                        - heading [level=3] [ref=e444]: lyzhany
-                        - paragraph [ref=e447]: dsadasdsadsadasdasdasdsa
-                      - generic [ref=e448]:
-                        - paragraph [ref=e449]:
-                          - img [ref=e450]
-                          - generic [ref=e451]: Jun 2, 2026
-                        - paragraph [ref=e452]:
-                          - img [ref=e453]
-                          - generic [ref=e454]: asdasd131
-                        - generic [ref=e455]:
-                          - paragraph [ref=e456]:
-                            - img [ref=e457]
-                            - generic [ref=e458]: "0"
-                          - paragraph [ref=e459]:
-                            - img [ref=e460]
-                            - generic [ref=e461]: "0"
-            - progressbar [ref=e465]:
-              - img [ref=e467]
-              - generic [ref=e470]:
-                - img [ref=e472]
-                - img [ref=e475]
-                - img [ref=e478]
-        - contentinfo [ref=e481]:
-          - generic [ref=e482]:
-            - generic [ref=e483]:
-              - link [ref=e485] [cursor=pointer]:
+                        - paragraph [ref=e381]:
+                          - img [ref=e382]
+                          - generic [ref=e383]: Jun 2, 2026
+                        - paragraph [ref=e384]:
+                          - img [ref=e385]
+                          - generic [ref=e386]: Yura
+                        - generic [ref=e387]:
+                          - paragraph [ref=e388]:
+                            - img [ref=e389]
+                            - generic [ref=e390]: "0"
+                          - paragraph [ref=e391]:
+                            - img [ref=e392]
+                            - generic [ref=e393]: "0"
+              - listitem [ref=e396]:
+                - link [ref=e397] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12711"
+                  - generic [ref=e399]:
+                    - img [ref=e400]
+                    - generic [ref=e401]:
+                      - list [ref=e402]:
+                        - generic [ref=e403]: News
+                      - generic [ref=e404]:
+                        - heading [level=3] [ref=e406]: TC-10 Initial title
+                        - paragraph [ref=e409]: TC-10 Initial content
+                      - generic [ref=e410]:
+                        - paragraph [ref=e411]:
+                          - img [ref=e412]
+                          - generic [ref=e413]: Jun 2, 2026
+                        - paragraph [ref=e414]:
+                          - img [ref=e415]
+                          - generic [ref=e416]: Yura
+                        - generic [ref=e417]:
+                          - paragraph [ref=e418]:
+                            - img [ref=e419]
+                            - generic [ref=e420]: "0"
+                          - paragraph [ref=e421]:
+                            - img [ref=e422]
+                            - generic [ref=e423]: "0"
+              - listitem [ref=e426]:
+                - link [ref=e427] [cursor=pointer]:
+                  - /url: "#/greenCity/news/12710"
+                  - generic [ref=e429]:
+                    - img [ref=e430]
+                    - generic [ref=e431]:
+                      - list [ref=e432]:
+                        - generic [ref=e433]: News
+                      - generic [ref=e434]:
+                        - heading [level=3] [ref=e436]: TC-10 Initial title
+                        - paragraph [ref=e439]: TC-10 Initial content
+                      - generic [ref=e440]:
+                        - paragraph [ref=e441]:
+                          - img [ref=e442]
+                          - generic [ref=e443]: Jun 2, 2026
+                        - paragraph [ref=e444]:
+                          - img [ref=e445]
+                          - generic [ref=e446]: Yura
+                        - generic [ref=e447]:
+                          - paragraph [ref=e448]:
+                            - img [ref=e449]
+                            - generic [ref=e450]: "0"
+                          - paragraph [ref=e451]:
+                            - img [ref=e452]
+                            - generic [ref=e453]: "0"
+            - progressbar [ref=e457]:
+              - img [ref=e459]
+              - generic [ref=e462]:
+                - img [ref=e464]
+                - img [ref=e467]
+                - img [ref=e470]
+        - contentinfo [ref=e473]:
+          - generic [ref=e474]:
+            - generic [ref=e475]:
+              - link [ref=e477] [cursor=pointer]:
                 - /url: "#/greenCity"
-                - img [ref=e486]
-              - navigation [ref=e487]:
-                - menu [ref=e488]:
-                  - listitem [ref=e489]:
-                    - link [ref=e490] [cursor=pointer]:
+                - img [ref=e478]
+              - navigation [ref=e479]:
+                - menu [ref=e480]:
+                  - listitem [ref=e481]:
+                    - link [ref=e482] [cursor=pointer]:
                       - /url: "#/greenCity/news"
                       - text: Eco news
-                  - listitem [ref=e491]:
-                    - link [ref=e492] [cursor=pointer]:
+                  - listitem [ref=e483]:
+                    - link [ref=e484] [cursor=pointer]:
                       - /url: "#/greenCity/events"
                       - text: Events
-                  - listitem [ref=e493]:
-                    - link [ref=e494] [cursor=pointer]:
+                  - listitem [ref=e485]:
+                    - link [ref=e486] [cursor=pointer]:
                       - /url: "#/greenCity/places"
                       - text: Places
-                  - listitem [ref=e495]:
-                    - link [ref=e496] [cursor=pointer]:
+                  - listitem [ref=e487]:
+                    - link [ref=e488] [cursor=pointer]:
                       - /url: "#/greenCity/about"
                       - text: About Us
-                  - listitem [ref=e497]:
-                    - link [ref=e498] [cursor=pointer]:
+                  - listitem [ref=e489]:
+                    - link [ref=e490] [cursor=pointer]:
                       - /url: "#/greenCity/profile/2537"
                       - text: My Space
-                  - listitem [ref=e499]:
-                    - link [ref=e500] [cursor=pointer]:
+                  - listitem [ref=e491]:
+                    - link [ref=e492] [cursor=pointer]:
                       - /url: "#/ubs"
                       - text: UBS Courier
-                - menu [ref=e501]:
-                  - listitem [ref=e502]:
-                    - paragraph [ref=e503]: Follow us
-                  - listitem [ref=e504]:
+                - menu [ref=e493]:
+                  - listitem [ref=e494]:
+                    - paragraph [ref=e495]: Follow us
+                  - listitem [ref=e496]:
+                    - link [ref=e497] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=e498]
+                    - link [ref=e499] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=e500]
+                    - link [ref=e501] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=e502]
+                    - link [ref=e503] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=e504]
                     - link [ref=e505] [cursor=pointer]:
                       - /url: "#"
                       - img [ref=e506]
-                    - link [ref=e507] [cursor=pointer]:
-                      - /url: "#"
-                      - img [ref=e508]
-                    - link [ref=e509] [cursor=pointer]:
-                      - /url: "#"
-                      - img [ref=e510]
-                    - link [ref=e511] [cursor=pointer]:
-                      - /url: "#"
-                      - img [ref=e512]
-                    - link [ref=e513] [cursor=pointer]:
-                      - /url: "#"
-                      - img [ref=e514]
-            - generic [ref=e515]: © Copyright 2026. Green City.
-    - button [ref=e516] [cursor=pointer]:
-      - img [ref=e517]
-  - generic [ref=e518]: Welcome to the search window
-  - generic [ref=e525]:
-    - button "close" [ref=e526] [cursor=pointer]:
-      - img "close" [ref=e527]
-    - generic [ref=e528]:
-      - generic [ref=e529]: All created content will be lost.
-      - generic [ref=e530]: Do you still want to cancel news creating?
-    - generic [ref=e531]:
-      - button "Continue editing" [ref=e532] [cursor=pointer]
-      - button "Yes, cancel" [ref=e533] [cursor=pointer]
+            - generic [ref=e507]: © Copyright 2026. Green City.
+    - button [ref=e508] [cursor=pointer]:
+      - img [ref=e509]
+  - generic [ref=e510]: Welcome to the search window
+  - generic [ref=e517]:
+    - button "close" [ref=e518] [cursor=pointer]:
+      - img "close" [ref=e519]
+    - generic [ref=e520]:
+      - generic [ref=e521]: All created content will be lost.
+      - generic [ref=e522]: Do you still want to cancel news creating?
+    - generic [ref=e523]:
+      - button "Continue editing" [ref=e524] [cursor=pointer]
+      - button "Yes, cancel" [ref=e525] [cursor=pointer]
 ```
 
 # Test source
