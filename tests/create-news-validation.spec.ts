@@ -4,6 +4,10 @@ import { NewsPage } from '../pages/news.page';
 import { CreateNewsFormComponent } from '../components/create-news-form.component';
 
 test.describe('News Creation — Field Validation and Button States', () => {
+
+  test.beforeEach(async ({ page }) => {
+  page.on('dialog', dialog => dialog.accept());
+  });
   
   test('TC2 - should validate Title field limits and Publish button states', async ({ page }) => {
     await allure.epic('GreenCity Web Application');
@@ -51,6 +55,7 @@ test.describe('News Creation — Field Validation and Button States', () => {
 
     const newsPage = new NewsPage(page);
     const createNewsForm = new CreateNewsFormComponent(page);
+    
 
     await newsPage.open();
     await newsPage.clickCreateNews();
