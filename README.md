@@ -1,195 +1,91 @@
-# GreenCity Eco-News Automation Project (Playwright + TypeScript)
+# 🚀 Playwright Automation Testing Framework
 
-Welcome to our automation repository!  
-This project uses **Playwright** with the **Page Object Model (POM)** pattern and **TypeScript** to automate E2E tests for the GreenCity platform.
-
-As a team, we are working on automating **TC1 through TC10**.  
-The foundational architecture, core configuration, CI/CD pipeline, and the first two test cases (**TC1 & TC2**) are already fully implemented and ready.
+A professional, production-ready automation testing framework designed for verifying web platform modules (specifically focusing on the News Creation and Validation functionality). This project is built using a modern quality assurance tech stack, prioritizing scalability, execution speed, and detailed comprehensive reporting.
 
 ---
 
-# 🚀 Getting Started (How to Pull & Setup)
+## 🛠 Tech Stack
 
-Before you start picking up tasks, make sure you have the latest codebase and all dependencies installed.
+* **Language:** TypeScript
+* **Testing Framework:** [Playwright](https://playwright.dev/)
+* **Design Pattern:** Page Object Model (POM)
+* **Reporting:** Allure Report + Native Playwright HTML Report
+* **CI/CD Platform:** GitHub Actions (Docker-based execution)
+* **Report Hosting:** GitHub Pages
 
-## 1. Fetch the latest updates from `main`
+---
 
+## 🏗 Project Architecture
+
+The repository is structured following strict software engineering principles to separate test logic from page element representations:
+
+* `pages/` — Page Object classes containing locators and action methods for UI interaction.
+* `tests/` — Test specifications (specs) categorized by logical modules (Layout, Validation, Functional Flows).
+* `utils/` — Utility helpers, including `env.ts` for secure environment variable management.
+* `.github/workflows/` — Continuous Integration (CI/CD) pipeline configurations.
+
+---
+
+## 📋 Automated Test Scenarios
+
+The framework covers **8 core high-priority test cases** that validate the critical paths of the target module:
+
+1. **Layout Validation:** Verifies the presence, visibility, and correct DOM injection order of all form fields.
+2. **Field Validation:** Tests boundary values, edge cases, and character limits for input fields (including negative verification).
+3. **Functional Flows:** Validates tag selection limits, state mutations of action buttons ("Publish" / "Create"), and dynamic overlay handling.
+4. **Global Auth Setup:** Implements automated storage state preservation to handle secure session authentication globally before execution.
+
+---
+
+## ⚙️ Local Setup & Execution
+
+### 1. Clone the Repository
 ```bash
-git checkout main
-git pull origin main
-```
+git clone [https://github.com/MF-s/TAQC-Project-Team03.git](https://github.com/MF-s/TAQC-Project-Team03.git)
+cd TAQC-Project-Team03
 
-## 2. Install project dependencies
+---
 
+### 2. Install Dependencies
 ```bash
 npm ci
-```
-
-## 3. Install Playwright browsers
-
-```bash
 npx playwright install --with-deps
-```
 
 ---
 
-## 4. create .env use for it .env.example
+### 3. Environment Configuration
 
-for BASE_URL use https://www.greencity.cx.ua
-
-for USER_EMAIL & USER_PASSWORD use yours email and password
-
-# 🏗️ Architecture & Git Workflow
-
-To prevent merge conflicts and keep the repository clean:
-
-- ❌ Do **not** write raw locators directly inside test files
-- ✅ All locators and reusable actions must be placed inside:
-  - `components/`
-  - `pages/`
-
----
-
-# 🧩 Working with `CreateNewsFormComponent`
-
-For **TC3, TC4, TC5, and TC6**, you will be validating:
-
-- Input fields
-- Counters
-- Tags
-- Validation messages
-
-All required locators are already declared inside:
-
-```txt
-src/components/create-news-form.component.ts
-```
-
-Examples:
-
-- `titleInput`
-- `contentEditor`
-- `sourceInput`
-- `tagsSection`
-
-## Important
-
-If you need additional validations or helper methods:
-
-✅ Add them inside the existing component class  
-❌ Do NOT create duplicate components for the same form
-
----
-
-# 📂 Placeholders for TC7 – TC10
-
-The placeholder files for upcoming test cases are already prepared.
-
-| Test Case | Target File | Purpose |
-|---|---|---|
-| TC7 | `src/components/confirmation-modal.component.ts` | Cancel modal locators and actions |
-| TC8 | `src/components/news-preview.component.ts` | Preview page validations |
-| TC9 & TC10 | `src/pages/news-details.page.ts` | Single news page & Edit functionality |
-
----
-
-## 🔁 Note for TC10 (Editing)
-
-The **Edit News** form is identical to the **Create News** form.
-
-You do **not** need to create a separate component/page for editing.
-
-Instead:
-
-1. Navigate using `NewsDetailsPage`
-2. Click the **Edit** button
-3. Re-use existing methods from:
-
-```txt
-CreateNewsFormComponent
-```
-
----
-
-# 📊 Test Execution & Allure Reports
-
-The project already includes:
-
-- ✅ Allure Reports
-- ✅ `allure.step()` logging
-- ✅ Automatic screenshots on failure
-
----
-
-## ▶️ Run All Tests
-
-### Run all tests in headless mode
-
+Create a .env file in the root directory of the project to feed your credentials locally. This file is excluded from git tracking via .gitignore for security:
 ```bash
-npm run test
-```
-
-### Run a specific test file in headed mode
-
-```bash
-npx playwright test tests/create-news-validation.spec.ts --headed
-```
+BASE_URL=https://www.greencity.cx.ua
+USER_EMAIL=your-qa-user@example.com
+USER_PASSWORD=your-secure-password
 
 ---
 
-# 📈 Generate Allure Report
-
-After test execution finishes, generate and open the report:
-
+### 4. Run Tests Locally
 ```bash
-npm run allure:report
-```
-
-This command will:
-
-- Compile Allure results
-- Attach screenshots from failed tests
-- Launch a local report server in your browser
-
-## Stop the local Allure server
-
-Press:
-
-```bash
-Ctrl + C
-```
-
-inside the terminal.
+npx playwright test
 
 ---
 
-# 🛠️ Branching Policy Reminder
+🚀 CI/CD Pipeline & Automated Reporting
 
-## ❌ Never push directly to `main`
+This project features a fully automated verification cycle powered by GitHub Actions:
 
-Create a separate feature branch for your work:
+- Trigger Actions: Tests are automatically executed on every push or pull_request targetting the main branch.
+- Dockerized Environment: Execution runs inside the official Microsoft Playwright Docker container to guarantee identical, environment-agnostic execution.
 
-```bash
-git checkout -b feature/tc3-tc4-validation
-```
+- Automated Deployment: Post-execution, the pipeline automatically:
 
-Once your task is complete:
+  1. Compiles a fresh Allure Report.
 
-1. Push your branch
-2. Open a Pull Request against `main`
+  2. Injects chronological testing history.
 
----
+  3. Purges stale artifacts and deploys the production-ready static report site directly to the gh-pages branch
 
-# ✅ Team Guidelines
+📊 Live Interactive Test Reports: https://mf-s.github.io/TAQC-Project-Team03/#
 
-- Keep tests independent
-- Re-use existing components/pages
-- Avoid duplicated locators
-- Keep assertions readable
-- Prefer reusable helper methods over repeated code
+🛑 Known System Limitations
 
----
-
-# 🚀 Good luck team!
-
-Let’s write some clean and stable automation code 💚
+- Certain test cases are expected to fail during execution due to uncovered product defects and deviations from the technical specifications (e.g., validation limit mismatches in input fields). These are deliberately tracked within the reporting dashboard.
