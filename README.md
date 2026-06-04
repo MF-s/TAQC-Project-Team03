@@ -43,6 +43,7 @@ The framework covers **8 core high-priority test cases** that validate the criti
 ```bash
 git clone [https://github.com/MF-s/TAQC-Project-Team03.git](https://github.com/MF-s/TAQC-Project-Team03.git)
 cd TAQC-Project-Team03
+```
 
 ---
 
@@ -50,6 +51,7 @@ cd TAQC-Project-Team03
 ```bash
 npm ci
 npx playwright install --with-deps
+```
 
 ---
 
@@ -60,12 +62,14 @@ Create a .env file in the root directory of the project to feed your credentials
 BASE_URL=https://www.greencity.cx.ua
 USER_EMAIL=your-qa-user@example.com
 USER_PASSWORD=your-secure-password
+```
 
 ---
 
 ### 4. Run Tests Locally
 ```bash
 npx playwright test
+```
 
 ---
 
